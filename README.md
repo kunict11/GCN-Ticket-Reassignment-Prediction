@@ -1,1 +1,1 @@
-# GCN-Ticket-Reassignment-Prediction
+# Previđanje preraspodele tiketa sistema podrške
