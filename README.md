@@ -14,6 +14,8 @@ Statusi i napredak u razrešavanju tiketa je moguće ispratiti izvršavanjem upi
 Modelovanjem podataka u vidu grafa, pojednostavljeno je izvršavanje upita koji nisu unapred poznati. Umesto spajanja više tabela, izvršava se obilazak grafa što je efikasnija i manje zahtevna operacija.
 Proces razrešavanja tiketa može se predstaviti sledećim grafom:
 
+![incident_graph](assets/incident_graph.png)
+
 Razlikujemo četiri entiteta u postupku razrešavanja tiketa:
 
 - customer - korisnik koji je prijavio problem
@@ -25,9 +27,7 @@ Razlikujemo četiri entiteta u postupku razrešavanja tiketa:
 
 Skup podataka koji je korišćen u radu je [Incident management process enriched event log](https://archive.ics.uci.edu/dataset/498/incident+management+process+enriched+event+log) koji se može naći na UCI Machine Learning Repository. Podaci su prikupljeni iz logova [ServiceNow](https://www.servicenow.com/now-platform.html) platforme (tačnije, sa njihovog [IT Service Management](https://www.servicenow.com/products/itsm.html) servisa ) koju koristi jedna IT firma. U skupu postoji veliki broj nedostajućih vrednosti zbog privatnosti podataka.
 
-Skup sadrži 141712 instanci sa 36 atributa. Tačan opis svakog atributa može se naći ovde. Atribut od značaja u projektu je reassignment_count koji predstavlja koliko puta je promenjen zaduženi za rešavanje incidenta. Ovaj atribut je transformisan u indikator reassigned koji označava da li je bilo promene zaduženja za neki incident. Atribut reassigned je ciljna promenljiva problema binarne klasifikacije pomoću grafovske neuronske mreže.
-
-## Grafovska neuronska mreža
+Skup sadrži 141712 instanci sa 36 atributa. Tačan opis svakog atributa može se naći [ovde](https://archive.ics.uci.edu/dataset/498/incident+management+process+enriched+event+log). Atribut od značaja u projektu je reassignment_count koji predstavlja koliko puta je promenjen zaduženi za rešavanje incidenta. Ovaj atribut je transformisan u indikator reassigned koji označava da li je bilo promene zaduženja za neki incident. Atribut reassigned je ciljna promenljiva problema binarne klasifikacije pomoću grafovske neuronske mreže.
 
 Svaki od ovih tipova čvorova pomenutih ranije ima svoje atribute.
 
@@ -54,4 +54,24 @@ Svaki od ovih tipova čvorova pomenutih ranije ima svoje atribute.
 
 Cilj binarne klasifikacije je odrediti da li čvor tipa incident pripada klasi 0 ili 1.
 
+## Implementacija
+
+Paketi korišćeni u implementaciji:
+- [numpy](https://numpy.org/doc/stable/)
+- [pandas](https://pandas.pydata.org/docs/)
+- [matplotlib](https://matplotlib.org/stable/index.html)
+- [PyTorch](https://pytorch.org/docs/stable/index.html)
+- [PyTorch Geometric](https://pytorch-geometric.readthedocs.io/en/latest/)
+- [scikit-learn](https://scikit-learn.org/stable/modules/classes.html)
+
+Instalacija paketa:
+```
+pip install numpy pandas matplotlib torch torch_geometric scikit-learn
+```
+
 ## Literatura
+
+1. [Predicting help desk ticket reassignments with graph convolutional networks, Jörg Schad, Rajiv Sambasivan, Christopher Woodward, 2022](https://www.sciencedirect.com/science/article/pii/S2666827021001195)
+2. [Inductive Representation Learning on Large Graphs, William L. Hamilton, Rex Ying, Jure Leskovec, 2018](https://arxiv.org/abs/1706.02216)
+3. [Graph Neural Networks: A Review of Methods and Applications, Jie Zhou, Ganqu Cui, Shengding Hu, Zhengyan Zhang, Cheng Yang, Zhiyuan Liu, Lifeng Wang, Changcheng Li, Maosong Sun, 2020](https://arxiv.org/abs/1812.08434)
+4. [PyG Documentation](https://pytorch-geometric.readthedocs.io/en/latest/)
