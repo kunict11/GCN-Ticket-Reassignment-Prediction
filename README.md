@@ -57,6 +57,7 @@ Cilj binarne klasifikacije je odrediti da li čvor tipa incident pripada klasi 0
 ## Implementacija
 
 Paketi korišćeni u implementaciji:
+
 - [numpy](https://numpy.org/doc/stable/)
 - [pandas](https://pandas.pydata.org/docs/)
 - [matplotlib](https://matplotlib.org/stable/index.html)
@@ -65,9 +66,12 @@ Paketi korišćeni u implementaciji:
 - [scikit-learn](https://scikit-learn.org/stable/modules/classes.html)
 
 Instalacija paketa:
+
 ```
 pip install numpy pandas matplotlib torch torch_geometric scikit-learn
 ```
+
+Graf podataka (hetero_data.pt) i istrenirani model (model.pt) se nalaze u direktorijumu [data](https://github.com/kunict11/GCN-Ticket-Reassignment-Prediction/blob/main/data).
 
 ## Literatura
 
