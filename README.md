@@ -76,6 +76,7 @@ Graf podataka (hetero_data.pt) i istrenirani model (model.pt) se nalaze u direkt
 ## Literatura
 
 1. [Predicting help desk ticket reassignments with graph convolutional networks, Jörg Schad, Rajiv Sambasivan, Christopher Woodward, 2022](https://www.sciencedirect.com/science/article/pii/S2666827021001195)
-2. [Inductive Representation Learning on Large Graphs, William L. Hamilton, Rex Ying, Jure Leskovec, 2018](https://arxiv.org/abs/1706.02216)
-3. [Graph Neural Networks: A Review of Methods and Applications, Jie Zhou, Ganqu Cui, Shengding Hu, Zhengyan Zhang, Cheng Yang, Zhiyuan Liu, Lifeng Wang, Changcheng Li, Maosong Sun, 2020](https://arxiv.org/abs/1812.08434)
-4. [PyG Documentation](https://pytorch-geometric.readthedocs.io/en/latest/)
+2. [Hands-On Graph Neural Networks Using Python, Maxime Labonne, 2023](https://www.packtpub.com/product/hands-on-graph-neural-networks-using-python/9781804617526)
+3. [Inductive Representation Learning on Large Graphs, William L. Hamilton, Rex Ying, Jure Leskovec, 2018](https://arxiv.org/abs/1706.02216)
+4. [Graph Neural Networks: A Review of Methods and Applications, Jie Zhou, Ganqu Cui, Shengding Hu, Zhengyan Zhang, Cheng Yang, Zhiyuan Liu, Lifeng Wang, Changcheng Li, Maosong Sun, 2020](https://arxiv.org/abs/1812.08434)
+5. [PyG Documentation](https://pytorch-geometric.readthedocs.io/en/latest/)
